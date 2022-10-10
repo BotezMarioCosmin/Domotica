@@ -15,7 +15,7 @@ namespace Domotica
     }
     internal class Telecomando
     {
-        int canale;
+        int canale = 0, volume = 0;
 
         private string produttore;
         private string modello;
@@ -40,6 +40,16 @@ namespace Domotica
         public void setCanale(int number)
         {
             canale = number;        
+        }
+
+        public int getVolume()
+        {
+            return volume;
+        }
+
+        public void setVolume(int number)
+        {
+            volume = number;
         }
 
     }

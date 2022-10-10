@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Domotica
 {
@@ -19,20 +20,40 @@ namespace Domotica
             t = new Telecomando("samsung", "a1", true, false, false);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            textBox1.Text = Convert.ToString(t.getCanale());
-
+            lblCanale.Text = Convert.ToString(t.getCanale());
+            lblVolume.Text = Convert.ToString(t.getVolume());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnClearCanale_Click(object sender, EventArgs e)
         {
-            textBox1.Text = null;
+            textBoxCanale.Text = null;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnGetCanale_Click(object sender, EventArgs e)
         {
-            t.setCanale(Convert.ToInt32(textBox1.Text));
+            textBoxCanale.Text = Convert.ToString(t.getCanale());
+        }
+
+        private void btnSetCanale_Click(object sender, EventArgs e)
+        {
+            t.setCanale(Convert.ToInt32(textBoxCanale.Text));
+        }
+
+        private void btnGetVolume_Click(object sender, EventArgs e)
+        {
+            textBoxVolume.Text = Convert.ToString(t.getVolume());
+        }
+
+        private void btnClearVolume_Click(object sender, EventArgs e)
+        {
+            textBoxVolume.Text = null;
+        }
+
+        private void btnSetVolume_Click(object sender, EventArgs e)
+        {
+            t.setVolume(Convert.ToInt32(textBoxVolume.Text));
         }
     }
 }
