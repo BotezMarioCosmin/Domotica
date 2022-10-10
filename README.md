@@ -1,1 +1,2 @@
 # Domotica
+simulazione funzionalità telecomando
