@@ -21,8 +21,18 @@ namespace Domotica
 
         private void button1_Click(object sender, EventArgs e)
         {
-             
+            textBox1.Text = Convert.ToString(t.getCanale());
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = null;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            t.setCanale(Convert.ToInt32(textBox1.Text));
         }
     }
 }
