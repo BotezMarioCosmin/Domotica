@@ -39,7 +39,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(218, 154);
+            this.button1.Location = new System.Drawing.Point(319, 330);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 54);
             this.button1.TabIndex = 0;
@@ -49,14 +49,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(371, 168);
+            this.textBox1.Location = new System.Drawing.Point(472, 344);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(141, 26);
             this.textBox1.TabIndex = 1;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(579, 154);
+            this.button2.Location = new System.Drawing.Point(680, 330);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(81, 54);
             this.button2.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(409, 105);
+            this.button3.Location = new System.Drawing.Point(510, 281);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 45);
             this.button3.TabIndex = 3;
@@ -76,15 +76,17 @@
             // 
             // pnlTv
             // 
+            this.pnlTv.BackgroundImage = global::Domotica.Properties.Resources._3443580;
+            this.pnlTv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlTv.Controls.Add(this.textBoxCanale);
-            this.pnlTv.Location = new System.Drawing.Point(25, 44);
+            this.pnlTv.Location = new System.Drawing.Point(12, 12);
             this.pnlTv.Name = "pnlTv";
-            this.pnlTv.Size = new System.Drawing.Size(200, 100);
+            this.pnlTv.Size = new System.Drawing.Size(323, 252);
             this.pnlTv.TabIndex = 4;
             // 
             // textBoxCanale
             // 
-            this.textBoxCanale.Location = new System.Drawing.Point(57, 42);
+            this.textBoxCanale.Location = new System.Drawing.Point(129, 124);
             this.textBoxCanale.Name = "textBoxCanale";
             this.textBoxCanale.Size = new System.Drawing.Size(100, 26);
             this.textBoxCanale.TabIndex = 0;
