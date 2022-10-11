@@ -37,6 +37,7 @@ namespace Domotica
             volume = t.getVolume();
 
             volume = checkVolume(volume);
+            t.setVolume(volume);
 
             lblVolume.Text = Convert.ToString(volume);
         }
@@ -93,6 +94,20 @@ namespace Domotica
                 tvOn = false;
                 pnlTvOff.Show();
             }
+        }
+
+        private void btnVolumeSu_Click(object sender, EventArgs e)
+        {
+            int v = t.getVolume();
+
+            t.setVolume(v+1);
+        }
+
+        private void btnVolumeGiu_Click(object sender, EventArgs e)
+        {
+            int v = t.getVolume();
+
+            t.setVolume(v - 1);
         }
     }
 }

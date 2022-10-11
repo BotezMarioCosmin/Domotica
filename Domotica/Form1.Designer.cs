@@ -240,6 +240,7 @@
             this.btnVolumeSu.TabIndex = 1;
             this.btnVolumeSu.Text = "+";
             this.btnVolumeSu.UseVisualStyleBackColor = false;
+            this.btnVolumeSu.Click += new System.EventHandler(this.btnVolumeSu_Click);
             // 
             // btnVolumeGiu
             // 
@@ -254,6 +255,7 @@
             this.btnVolumeGiu.TabIndex = 2;
             this.btnVolumeGiu.Text = "-";
             this.btnVolumeGiu.UseVisualStyleBackColor = false;
+            this.btnVolumeGiu.Click += new System.EventHandler(this.btnVolumeGiu_Click);
             // 
             // lblVol
             // 
