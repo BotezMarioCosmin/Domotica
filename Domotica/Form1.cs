@@ -55,6 +55,7 @@ namespace Domotica
         private void btnSetCanale_Click(object sender, EventArgs e)
         {
             t.setCanale(Convert.ToInt32(textBoxCanale.Text));
+            textBoxCanale.Text = null;
         }
 
         private void btnGetVolume_Click(object sender, EventArgs e)
@@ -70,11 +71,12 @@ namespace Domotica
         private void btnSetVolume_Click(object sender, EventArgs e)
         {
             t.setVolume(Convert.ToInt32(textBoxVolume.Text));
+            textBoxVolume.Text = null;
         }
 
-        public static int checkVolume(int v)
+        public static int checkVolume(int v) // controlla che il volume sia tra 0 e 100
         {
-            if (v >= 100)
+            if (v > 100 || v < 0)
             {
                 return 0;
             }
@@ -96,18 +98,92 @@ namespace Domotica
             }
         }
 
-        private void btnVolumeSu_Click(object sender, EventArgs e)
+        private void btnVolumeSu_Click(object sender, EventArgs e) // aggiunge 1 al volume
         {
             int v = t.getVolume();
 
-            t.setVolume(v+1);
+            if (v < 100)
+            {
+                t.setVolume(v + 1);
+            }
+            if (v == 100)
+            {
+                t.setVolume(0);
+            }
         }
 
-        private void btnVolumeGiu_Click(object sender, EventArgs e)
+        private void btnVolumeGiu_Click(object sender, EventArgs e) // diminuisce 1 al volume
         {
             int v = t.getVolume();
 
-            t.setVolume(v - 1);
+            if (v > 0)
+            {
+                t.setVolume(v - 1);
+            }
+        }
+
+        private void btnCanaleSu_Click(object sender, EventArgs e) // aggiunge 1 al canale
+        {
+            int c = t.getCanale();
+
+            t.setCanale(c + 1);
+        }
+
+        private void btnCanaleGiu_Click(object sender, EventArgs e) // diminuisce di 1 il canale
+        {
+            int c = t.getCanale();
+
+            t.setCanale(c - 1);
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            t.setCanale(1);
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            t.setCanale(2);
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            t.setCanale(3);
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            t.setCanale(4);
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            t.setCanale(5);
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            t.setCanale(6);
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            t.setCanale(7);
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            t.setCanale(8);
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            t.setCanale(9);
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            t.setCanale(0);
         }
     }
 }
