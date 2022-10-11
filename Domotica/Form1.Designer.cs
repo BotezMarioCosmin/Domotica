@@ -46,7 +46,7 @@
             // 
             // btnGetCanale
             // 
-            this.btnGetCanale.Location = new System.Drawing.Point(940, 219);
+            this.btnGetCanale.Location = new System.Drawing.Point(980, 50);
             this.btnGetCanale.Name = "btnGetCanale";
             this.btnGetCanale.Size = new System.Drawing.Size(85, 54);
             this.btnGetCanale.TabIndex = 0;
@@ -56,14 +56,14 @@
             // 
             // textBoxCanale
             // 
-            this.textBoxCanale.Location = new System.Drawing.Point(1031, 233);
+            this.textBoxCanale.Location = new System.Drawing.Point(1071, 64);
             this.textBoxCanale.Name = "textBoxCanale";
             this.textBoxCanale.Size = new System.Drawing.Size(141, 26);
             this.textBoxCanale.TabIndex = 1;
             // 
             // btnSetCanale
             // 
-            this.btnSetCanale.Location = new System.Drawing.Point(1178, 219);
+            this.btnSetCanale.Location = new System.Drawing.Point(1218, 50);
             this.btnSetCanale.Name = "btnSetCanale";
             this.btnSetCanale.Size = new System.Drawing.Size(81, 54);
             this.btnSetCanale.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             // btnClearCanale
             // 
-            this.btnClearCanale.Location = new System.Drawing.Point(1061, 173);
+            this.btnClearCanale.Location = new System.Drawing.Point(1101, 4);
             this.btnClearCanale.Name = "btnClearCanale";
             this.btnClearCanale.Size = new System.Drawing.Size(75, 45);
             this.btnClearCanale.TabIndex = 3;
@@ -123,7 +123,7 @@
             // 
             // btnClearVolume
             // 
-            this.btnClearVolume.Location = new System.Drawing.Point(1061, 306);
+            this.btnClearVolume.Location = new System.Drawing.Point(1101, 137);
             this.btnClearVolume.Name = "btnClearVolume";
             this.btnClearVolume.Size = new System.Drawing.Size(75, 45);
             this.btnClearVolume.TabIndex = 8;
@@ -133,7 +133,7 @@
             // 
             // btnSetVolume
             // 
-            this.btnSetVolume.Location = new System.Drawing.Point(1178, 352);
+            this.btnSetVolume.Location = new System.Drawing.Point(1218, 183);
             this.btnSetVolume.Name = "btnSetVolume";
             this.btnSetVolume.Size = new System.Drawing.Size(81, 54);
             this.btnSetVolume.TabIndex = 7;
@@ -143,14 +143,14 @@
             // 
             // textBoxVolume
             // 
-            this.textBoxVolume.Location = new System.Drawing.Point(1031, 366);
+            this.textBoxVolume.Location = new System.Drawing.Point(1071, 197);
             this.textBoxVolume.Name = "textBoxVolume";
             this.textBoxVolume.Size = new System.Drawing.Size(141, 26);
             this.textBoxVolume.TabIndex = 6;
             // 
             // btnGetVolume
             // 
-            this.btnGetVolume.Location = new System.Drawing.Point(940, 352);
+            this.btnGetVolume.Location = new System.Drawing.Point(980, 183);
             this.btnGetVolume.Name = "btnGetVolume";
             this.btnGetVolume.Size = new System.Drawing.Size(85, 54);
             this.btnGetVolume.TabIndex = 5;

@@ -22,8 +22,15 @@ namespace Domotica
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            int volume;
+
             lblCanale.Text = Convert.ToString(t.getCanale());
-            lblVolume.Text = Convert.ToString(t.getVolume());
+            volume = t.getVolume();
+
+            volume = checkVolume(volume);
+
+            lblVolume.Text = Convert.ToString(volume);
+
         }
 
         private void btnClearCanale_Click(object sender, EventArgs e)
@@ -54,6 +61,16 @@ namespace Domotica
         private void btnSetVolume_Click(object sender, EventArgs e)
         {
             t.setVolume(Convert.ToInt32(textBoxVolume.Text));
+        }
+
+        public static int checkVolume(int v)
+        {
+            if (v >= 100)
+            {
+                return 0;
+            }
+            else
+                return v;
         }
     }
 }

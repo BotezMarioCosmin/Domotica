@@ -20,7 +20,6 @@ namespace Domotica
         private string produttore;
         private string modello;
         
-
         public Telecomando(string produttore1,string modello1, bool infrarossi1, bool bluetooth1, bool wifi1)
         { 
             produttore = produttore1;
@@ -51,6 +50,5 @@ namespace Domotica
         {
             volume = number;
         }
-
     }
 }
