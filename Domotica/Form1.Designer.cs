@@ -176,9 +176,9 @@
             this.pictureBoxOnOff.BackgroundImage = global::Domotica.Properties.Resources.onoff;
             this.pictureBoxOnOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxOnOff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxOnOff.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxOnOff.Location = new System.Drawing.Point(23, 18);
             this.pictureBoxOnOff.Name = "pictureBoxOnOff";
-            this.pictureBoxOnOff.Size = new System.Drawing.Size(75, 75);
+            this.pictureBoxOnOff.Size = new System.Drawing.Size(56, 56);
             this.pictureBoxOnOff.TabIndex = 0;
             this.pictureBoxOnOff.TabStop = false;
             this.pictureBoxOnOff.Click += new System.EventHandler(this.pictureBoxOnOff_Click);
