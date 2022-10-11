@@ -14,10 +14,19 @@ namespace Domotica
     public partial class Form1 : Form
     {
         private Telecomando t;
+
+        bool tvOn = false;
         public Form1()
         {
             InitializeComponent();
             t = new Telecomando("samsung", "a1", true, false, false);
+
+            pnlTvOff.Show();
+
+            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, pictureBoxOnOff.Width - 3, pictureBoxOnOff.Height - 3);
+            Region rg = new Region(gp);
+            pictureBoxOnOff.Region = rg;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -30,7 +39,6 @@ namespace Domotica
             volume = checkVolume(volume);
 
             lblVolume.Text = Convert.ToString(volume);
-
         }
 
         private void btnClearCanale_Click(object sender, EventArgs e)
@@ -71,6 +79,20 @@ namespace Domotica
             }
             else
                 return v;
+        }
+
+        private void pictureBoxOnOff_Click(object sender, EventArgs e)
+        {
+            if (tvOn == false)
+            {
+                tvOn = true;
+                pnlTvOff.Hide();
+            }
+            else if (tvOn == true)
+            {
+                tvOn = false;
+                pnlTvOff.Show();
+            }
         }
     }
 }
