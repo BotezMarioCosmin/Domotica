@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Domotica
 {
@@ -189,6 +188,11 @@ namespace Domotica
             timerCanale.Start();
         }
 
+        private void btnMuto_Click(object sender, EventArgs e)
+        {
+            ///
+        }
+
         private void btn0_Click(object sender, EventArgs e)
         {
             t.setCanale(0);
@@ -197,12 +201,13 @@ namespace Domotica
 
         private void timerCanale_Tick(object sender, EventArgs e)
         {
+            /*
             c1 = t.getCanale();
             c1 += 10;
             c2 = t.getCanale();
             c1 += c2;
 
-            Thread.Sleep(2000);
+            Thread.Sleep(2000);*/
         }
     }
 }

@@ -56,16 +56,17 @@
             this.btnVolumeGiu = new System.Windows.Forms.Button();
             this.btnVolumeSu = new System.Windows.Forms.Button();
             this.timerCanale = new System.Windows.Forms.Timer(this.components);
+            this.btnMuto = new System.Windows.Forms.Button();
+            this.pictureBoxSource = new System.Windows.Forms.PictureBox();
             this.pictureBoxOnOff = new System.Windows.Forms.PictureBox();
             this.pnlTv = new System.Windows.Forms.Panel();
             this.pnlTvOff = new System.Windows.Forms.Panel();
             this.lblVolume = new System.Windows.Forms.Label();
             this.lblCanale = new System.Windows.Forms.Label();
-            this.pictureBoxSource = new System.Windows.Forms.PictureBox();
             this.pnlTelecomando.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnOff)).BeginInit();
             this.pnlTv.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGetCanale
@@ -152,6 +153,7 @@
             // pnlTelecomando
             // 
             this.pnlTelecomando.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlTelecomando.Controls.Add(this.btnMuto);
             this.pnlTelecomando.Controls.Add(this.pictureBoxSource);
             this.pnlTelecomando.Controls.Add(this.btn0);
             this.pnlTelecomando.Controls.Add(this.btn9);
@@ -423,6 +425,35 @@
             // 
             this.timerCanale.Tick += new System.EventHandler(this.timerCanale_Tick);
             // 
+            // btnMuto
+            // 
+            this.btnMuto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMuto.BackgroundImage = global::Domotica.Properties.Resources.mute;
+            this.btnMuto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMuto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMuto.FlatAppearance.BorderSize = 0;
+            this.btnMuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMuto.Location = new System.Drawing.Point(121, 387);
+            this.btnMuto.Name = "btnMuto";
+            this.btnMuto.Size = new System.Drawing.Size(55, 55);
+            this.btnMuto.TabIndex = 19;
+            this.btnMuto.UseVisualStyleBackColor = false;
+            this.btnMuto.Click += new System.EventHandler(this.btnMuto_Click);
+            // 
+            // pictureBoxSource
+            // 
+            this.pictureBoxSource.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBoxSource.BackgroundImage = global::Domotica.Properties.Resources.source;
+            this.pictureBoxSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSource.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxSource.Location = new System.Drawing.Point(224, 18);
+            this.pictureBoxSource.Name = "pictureBoxSource";
+            this.pictureBoxSource.Size = new System.Drawing.Size(56, 56);
+            this.pictureBoxSource.TabIndex = 18;
+            this.pictureBoxSource.TabStop = false;
+            // 
             // pictureBoxOnOff
             // 
             this.pictureBoxOnOff.BackgroundImage = global::Domotica.Properties.Resources.onoff;
@@ -479,18 +510,6 @@
             this.lblCanale.Text = "0";
             this.lblCanale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBoxSource
-            // 
-            this.pictureBoxSource.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBoxSource.BackgroundImage = global::Domotica.Properties.Resources.source;
-            this.pictureBoxSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSource.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxSource.Location = new System.Drawing.Point(224, 18);
-            this.pictureBoxSource.Name = "pictureBoxSource";
-            this.pictureBoxSource.Size = new System.Drawing.Size(56, 56);
-            this.pictureBoxSource.TabIndex = 18;
-            this.pictureBoxSource.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -511,9 +530,9 @@
             this.Text = "Form1";
             this.pnlTelecomando.ResumeLayout(false);
             this.pnlTelecomando.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnOff)).EndInit();
             this.pnlTv.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,6 +573,7 @@
         private System.Windows.Forms.Button btnCanaleSu;
         private System.Windows.Forms.Timer timerCanale;
         private System.Windows.Forms.PictureBox pictureBoxSource;
+        private System.Windows.Forms.Button btnMuto;
     }
 }
 

@@ -13,7 +13,7 @@ namespace Domotica
         public bool bluetooth;
         public bool wifi;
     }
-    internal class Telecomando
+    public class Telecomando
     {
         int canale = 0, volume = 0;
 
