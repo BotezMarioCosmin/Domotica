@@ -106,10 +106,6 @@ namespace Domotica
             {
                 t.setVolume(v + 1);
             }
-            if (v == 100)
-            {
-                t.setVolume(0);
-            }
         }
 
         private void btnVolumeGiu_Click(object sender, EventArgs e) // diminuisce 1 al volume
