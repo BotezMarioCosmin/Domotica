@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Domotica
@@ -16,6 +17,7 @@ namespace Domotica
         private Telecomando t;
 
         bool tvOn = false;
+        int c1, c2, c3;
         public Form1()
         {
             InitializeComponent();
@@ -135,51 +137,72 @@ namespace Domotica
         private void btn1_Click(object sender, EventArgs e)
         {
             t.setCanale(1);
+            timerCanale.Start();
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
             t.setCanale(2);
+            timerCanale.Start();
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
             t.setCanale(3);
+            timerCanale.Start();
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
             t.setCanale(4);
+            timerCanale.Start();
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
             t.setCanale(5);
+            timerCanale.Start();
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
             t.setCanale(6);
+            timerCanale.Start();
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
             t.setCanale(7);
+            timerCanale.Start();
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
+
             t.setCanale(8);
+            timerCanale.Start();
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
             t.setCanale(9);
+            timerCanale.Start();
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {
             t.setCanale(0);
+            timerCanale.Start();
+        }
+
+        private void timerCanale_Tick(object sender, EventArgs e)
+        {
+            c1 = t.getCanale();
+            c1 += 10;
+            c2 = t.getCanale();
+            c1 += c2;
+
+            Thread.Sleep(2000);
         }
     }
 }
