@@ -7,12 +7,6 @@ using System.Windows.Forms;
 
 namespace Domotica
 {
-    public struct modFunzionamento
-    {
-        public bool infrarossi;
-        public bool bluetooth;
-        public bool wifi;
-    }
     public class Telecomando
     {
         int canale = 0, volume = 0;
@@ -20,16 +14,67 @@ namespace Domotica
 
         private string produttore;
         private string modello;
+        private bool infrarossi;
+        private bool bluetooth;
+        private bool wifi;
+
+        bool TvStatus = false;
         
         public Telecomando(string produttore1,string modello1, bool infrarossi1, bool bluetooth1, bool wifi1)
         { 
             produttore = produttore1;
             modello = modello1;
 
-            modFunzionamento m;
-            m.infrarossi = infrarossi1;
-            m.bluetooth = bluetooth1;
-            m.wifi = wifi1;
+            infrarossi = infrarossi1;
+            bluetooth = bluetooth1;
+            wifi = wifi1;
+        }
+
+        public string getProduttore()
+        {
+            return produttore;
+        }
+
+        public string getModello()
+        {
+            return modello;
+        }
+
+        public string getModFunzionamento()
+        {
+            string i, b, w;
+            if (infrarossi == true)
+            {
+                i = "infrarossi/";
+            }
+            else
+                i = null;
+
+            if (bluetooth == true)
+            {
+                b = "bluetooth/";
+            }
+            else
+                b = null;
+
+            if (wifi == true)
+            {
+                w = "wifi/";
+            }
+            else
+                w = null;
+
+            return i + b + w;
+        }
+
+        public void accendiTv()
+        { 
+            TvStatus = true;
+        }
+
+        public void spegniTv()
+        {
+            TvStatus = false;
         }
 
         public int getCanale()

@@ -63,6 +63,7 @@
             this.pnlTvOff = new System.Windows.Forms.Panel();
             this.lblVolume = new System.Windows.Forms.Label();
             this.lblCanale = new System.Windows.Forms.Label();
+            this.textBoxProduttoreModello = new System.Windows.Forms.TextBox();
             this.pnlTelecomando.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnOff)).BeginInit();
@@ -467,6 +468,7 @@
             // 
             this.pnlTv.BackgroundImage = global::Domotica.Properties.Resources.TV_icon;
             this.pnlTv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlTv.Controls.Add(this.textBoxProduttoreModello);
             this.pnlTv.Controls.Add(this.pictureBoxVol);
             this.pnlTv.Controls.Add(this.pnlTvOff);
             this.pnlTv.Controls.Add(this.lblVolume);
@@ -492,7 +494,7 @@
             this.pnlTvOff.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlTvOff.Location = new System.Drawing.Point(35, 35);
             this.pnlTvOff.Name = "pnlTvOff";
-            this.pnlTvOff.Size = new System.Drawing.Size(796, 477);
+            this.pnlTvOff.Size = new System.Drawing.Size(796, 455);
             this.pnlTvOff.TabIndex = 2;
             // 
             // lblVolume
@@ -519,6 +521,18 @@
             this.lblCanale.Text = "0";
             this.lblCanale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // textBoxProduttoreModello
+            // 
+            this.textBoxProduttoreModello.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBoxProduttoreModello.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxProduttoreModello.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProduttoreModello.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxProduttoreModello.Location = new System.Drawing.Point(203, 490);
+            this.textBoxProduttoreModello.Name = "textBoxProduttoreModello";
+            this.textBoxProduttoreModello.Size = new System.Drawing.Size(459, 30);
+            this.textBoxProduttoreModello.TabIndex = 4;
+            this.textBoxProduttoreModello.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -542,6 +556,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnOff)).EndInit();
             this.pnlTv.ResumeLayout(false);
+            this.pnlTv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVol)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -584,6 +599,7 @@
         private System.Windows.Forms.PictureBox pictureBoxSource;
         private System.Windows.Forms.Button btnMuto;
         private System.Windows.Forms.PictureBox pictureBoxVol;
+        private System.Windows.Forms.TextBox textBoxProduttoreModello;
     }
 }
 

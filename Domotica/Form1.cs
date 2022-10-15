@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Domotica
 {
@@ -19,7 +20,7 @@ namespace Domotica
         public Form1()
         {
             InitializeComponent();
-            t = new Telecomando("samsung", "a1", true, false, false);
+            t = new Telecomando("samsung", "qhd oled frame tv", true, false, true);
 
             pnlTvOff.Show();
 
@@ -31,6 +32,8 @@ namespace Domotica
             pnlTv.Controls.Add(pictureBoxVol);
             pictureBoxVol.BackColor = Color.Transparent;
             pictureBoxVol.Hide();
+
+            textBoxProduttoreModello.Text = t.getProduttore() + " " + t.getModello();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -92,11 +95,13 @@ namespace Domotica
         {
             if (tvOn == false)
             {
+                t.accendiTv();
                 tvOn = true;
                 pnlTvOff.Hide();
             }
             else if (tvOn == true)
             {
+                t.spegniTv();
                 tvOn = false;
                 pnlTvOff.Show();
             }
