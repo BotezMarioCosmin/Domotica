@@ -9,17 +9,18 @@ namespace Domotica
 {
     public class Telecomando
     {
-        int canale = 0, volume = 0;
-        bool muto = false;
-
+        //immutabili
         private string produttore;
         private string modello;
         private bool infrarossi;
         private bool bluetooth;
         private bool wifi;
 
+        //mutabili
         bool TvStatus = false;
-        
+        int canale = 0, volume = 0;
+        bool muto = false;
+
         public Telecomando(string produttore1,string modello1, bool infrarossi1, bool bluetooth1, bool wifi1)
         { 
             produttore = produttore1;
