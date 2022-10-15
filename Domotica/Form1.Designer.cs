@@ -55,11 +55,11 @@
             this.lblVol = new System.Windows.Forms.Label();
             this.btnVolumeGiu = new System.Windows.Forms.Button();
             this.btnVolumeSu = new System.Windows.Forms.Button();
-            this.timerCanale = new System.Windows.Forms.Timer(this.components);
             this.btnMuto = new System.Windows.Forms.Button();
             this.pictureBoxSource = new System.Windows.Forms.PictureBox();
             this.pictureBoxOnOff = new System.Windows.Forms.PictureBox();
             this.pnlTv = new System.Windows.Forms.Panel();
+            this.pictureBoxVol = new System.Windows.Forms.PictureBox();
             this.pnlTvOff = new System.Windows.Forms.Panel();
             this.lblVolume = new System.Windows.Forms.Label();
             this.lblCanale = new System.Windows.Forms.Label();
@@ -67,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnOff)).BeginInit();
             this.pnlTv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVol)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGetCanale
@@ -421,10 +422,6 @@
             this.btnVolumeSu.UseVisualStyleBackColor = false;
             this.btnVolumeSu.Click += new System.EventHandler(this.btnVolumeSu_Click);
             // 
-            // timerCanale
-            // 
-            this.timerCanale.Tick += new System.EventHandler(this.timerCanale_Tick);
-            // 
             // btnMuto
             // 
             this.btnMuto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -470,6 +467,7 @@
             // 
             this.pnlTv.BackgroundImage = global::Domotica.Properties.Resources.TV_icon;
             this.pnlTv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlTv.Controls.Add(this.pictureBoxVol);
             this.pnlTv.Controls.Add(this.pnlTvOff);
             this.pnlTv.Controls.Add(this.lblVolume);
             this.pnlTv.Controls.Add(this.lblCanale);
@@ -477,6 +475,17 @@
             this.pnlTv.Name = "pnlTv";
             this.pnlTv.Size = new System.Drawing.Size(868, 610);
             this.pnlTv.TabIndex = 4;
+            // 
+            // pictureBoxVol
+            // 
+            this.pictureBoxVol.BackColor = System.Drawing.Color.Gray;
+            this.pictureBoxVol.BackgroundImage = global::Domotica.Properties.Resources.muteico;
+            this.pictureBoxVol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxVol.Location = new System.Drawing.Point(55, 234);
+            this.pictureBoxVol.Name = "pictureBoxVol";
+            this.pictureBoxVol.Size = new System.Drawing.Size(80, 80);
+            this.pictureBoxVol.TabIndex = 3;
+            this.pictureBoxVol.TabStop = false;
             // 
             // pnlTvOff
             // 
@@ -533,6 +542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnOff)).EndInit();
             this.pnlTv.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVol)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,9 +581,9 @@
         private System.Windows.Forms.Label lblCh;
         private System.Windows.Forms.Button btnCanaleGiu;
         private System.Windows.Forms.Button btnCanaleSu;
-        private System.Windows.Forms.Timer timerCanale;
         private System.Windows.Forms.PictureBox pictureBoxSource;
         private System.Windows.Forms.Button btnMuto;
+        private System.Windows.Forms.PictureBox pictureBoxVol;
     }
 }
 

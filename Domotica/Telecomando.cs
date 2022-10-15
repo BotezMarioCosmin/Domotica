@@ -16,6 +16,7 @@ namespace Domotica
     public class Telecomando
     {
         int canale = 0, volume = 0;
+        bool muto = false;
 
         private string produttore;
         private string modello;
@@ -49,6 +50,20 @@ namespace Domotica
         public void setVolume(int number)
         {
             volume = number;
+        }
+
+        public bool volumeMuto()
+        {
+            if (muto == false)
+            {
+                muto = true;
+                return muto;
+            }
+            else
+            {
+                muto = false;
+                return muto;
+            }
         }
     }
 }

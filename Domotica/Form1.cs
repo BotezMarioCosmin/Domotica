@@ -16,7 +16,6 @@ namespace Domotica
         private Telecomando t;
 
         bool tvOn = false;
-        int c1, c2, c3;
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +27,10 @@ namespace Domotica
             gp.AddEllipse(0, 0, pictureBoxOnOff.Width - 3, pictureBoxOnOff.Height - 3);
             Region rg = new Region(gp);
             pictureBoxOnOff.Region = rg;
+
+            pnlTv.Controls.Add(pictureBoxVol);
+            pictureBoxVol.BackColor = Color.Transparent;
+            pictureBoxVol.Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -136,78 +139,68 @@ namespace Domotica
         private void btn1_Click(object sender, EventArgs e)
         {
             t.setCanale(1);
-            timerCanale.Start();
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
             t.setCanale(2);
-            timerCanale.Start();
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
             t.setCanale(3);
-            timerCanale.Start();
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
             t.setCanale(4);
-            timerCanale.Start();
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
             t.setCanale(5);
-            timerCanale.Start();
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
             t.setCanale(6);
-            timerCanale.Start();
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
             t.setCanale(7);
-            timerCanale.Start();
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
 
             t.setCanale(8);
-            timerCanale.Start();
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
             t.setCanale(9);
-            timerCanale.Start();
         }
 
         private void btnMuto_Click(object sender, EventArgs e)
         {
-            ///
+            bool muto = t.volumeMuto();
+            if (muto == true)
+            {
+                lblVolume.Hide();
+                pictureBoxVol.Show();
+            }
+            else
+            {
+                lblVolume.Show();
+                pictureBoxVol.Hide();
+            }
+
         }
 
         private void btn0_Click(object sender, EventArgs e)
         {
             t.setCanale(0);
-            timerCanale.Start();
-        }
-
-        private void timerCanale_Tick(object sender, EventArgs e)
-        {
-            /*
-            c1 = t.getCanale();
-            c1 += 10;
-            c2 = t.getCanale();
-            c1 += c2;
-
-            Thread.Sleep(2000);*/
         }
     }
 }

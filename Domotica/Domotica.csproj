@@ -96,5 +96,8 @@
   <ItemGroup>
     <None Include="bin\Debug\img\mute.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\muteico.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
