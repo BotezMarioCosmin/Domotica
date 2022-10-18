@@ -39,14 +39,8 @@ namespace Domotica
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int volume;
-
             lblCanale.Text = Convert.ToString(tv.getCanale());
-            volume = tv.getVolume();
-
-            t.setVolume(volume);
-
-            lblVolume.Text = Convert.ToString(volume);
+            lblVolume.Text = Convert.ToString(tv.getVolume());
         }
 
         private void btnClearCanale_Click(object sender, EventArgs e)

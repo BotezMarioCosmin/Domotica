@@ -53,8 +53,7 @@ namespace Domotica
 
         public void setCanale(int c)
         {
-            if (c >= 0 || c <= 100)
-                canale = c;
+            canale = c;
         }
 
         public int getVolume()
@@ -64,8 +63,7 @@ namespace Domotica
 
         public void setVolume(int v)
         {
-            if (v >= 0 || v <= 100)
-                volume = v;
+            volume = v;
         }
 
         public void canaleSu(int c)
@@ -73,7 +71,9 @@ namespace Domotica
             if (c + 1 < 1000)
             {
                 canale++;
-            } 
+            }
+            else if (c + 1 > 999)
+                canale = 1;
         }
 
         public void canaleGiu(int c)
@@ -86,7 +86,7 @@ namespace Domotica
 
         public void volumeSu(int v)
         {
-            if (v + 1 < 1000)
+            if (v + 1 < 100)
             {
                 volume++;
             }
