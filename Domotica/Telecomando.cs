@@ -15,6 +15,7 @@ namespace Domotica
         private bool infrarossi;
         private bool bluetooth;
         private bool wifi;
+        private Tv tv;
 
         //mutabili
         bool TvStatus = false;
@@ -26,9 +27,21 @@ namespace Domotica
             produttore = produttore1;
             modello = modello1;
 
+            volume = 10;
+            canale = 0;
             infrarossi = infrarossi1;
             bluetooth = bluetooth1;
             wifi = wifi1;
+        }
+
+        private void setTv(Tv tv1)
+        {
+            tv = tv1;
+        }
+
+        private Tv getTv()
+        {
+            return tv;
         }
 
         public string getProduttore()
@@ -69,12 +82,14 @@ namespace Domotica
         }
 
         public void accendiTv()
-        { 
+        {
+            //tv.accendi();
             TvStatus = true;
         }
 
         public void spegniTv()
         {
+            //tv.spegni();
             TvStatus = false;
         }
 
@@ -96,6 +111,37 @@ namespace Domotica
         public void setVolume(int number)
         {
             volume = number;
+        }
+        public void volumeSu(int v)
+        {
+            if (v + 1 < 100)
+            {
+                volume++;
+            }
+        }
+
+        public void volumeGiu(int v)
+        {
+            if (v - 1 >= 0)
+            {
+                volume--;
+            }
+        }
+
+        public void canaleSu(int c)
+        {
+            if (c + 1 < 1000)
+            {
+                canale++;
+            }
+        }
+
+        public void canaleGiu(int c)
+        {
+            if (c - 1 > 0)
+            {
+                canale--;
+            }
         }
 
         public bool volumeMuto()

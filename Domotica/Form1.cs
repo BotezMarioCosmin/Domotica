@@ -110,35 +110,25 @@ namespace Domotica
         private void btnVolumeSu_Click(object sender, EventArgs e) // aggiunge 1 al volume
         {
             int v = t.getVolume();
-
-            if (v < 100)
-            {
-                t.setVolume(v + 1);
-            }
+            t.volumeSu(v);
         }
 
         private void btnVolumeGiu_Click(object sender, EventArgs e) // diminuisce 1 al volume
         {
             int v = t.getVolume();
-
-            if (v > 0)
-            {
-                t.setVolume(v - 1);
-            }
+            t.volumeGiu(v);
         }
 
         private void btnCanaleSu_Click(object sender, EventArgs e) // aggiunge 1 al canale
         {
             int c = t.getCanale();
-
-            t.setCanale(c + 1);
+            t.canaleSu(c);
         }
 
         private void btnCanaleGiu_Click(object sender, EventArgs e) // diminuisce di 1 il canale
         {
             int c = t.getCanale();
-
-            t.setCanale(c - 1);
+            t.canaleGiu(c);
         }
 
         private void btn1_Click(object sender, EventArgs e)

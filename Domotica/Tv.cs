@@ -51,24 +51,36 @@ namespace Domotica
             canaleSel = numero;
         }
 
-        public void canalePiu()
+        public void canalePiu(int c)
         {
-            canaleSel += 1;
+            if (c + 1 < 1000)
+            {
+                canaleSel++;
+            } 
         }
 
-        public void canaleMeno()
+        public void canaleMeno(int c)
         {
-            canaleSel -= 1;
+            if (c - 1 > 0)
+            {
+                canaleSel--;
+            }
         }
 
-        public void aumentaVolume()
+        public void aumentaVolume(int v)
         {
-            volume += 1;
+            if (v + 1 < 1000)
+            {
+                volume++;
+            }
         }
 
-        public void diminuisciVolume()
+        public void diminuisciVolume(int v)
         {
-            volume -= 1;
+            if (v - 1 >= 0)
+            {
+                volume--;
+            }
         }
 
         public void Rete()
