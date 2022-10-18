@@ -19,7 +19,7 @@ namespace Domotica
 
         //mutabili
         bool stato;
-        int canaleSel, volume, luminosita;
+        int canale, volume, luminosita;
         bool statoRete; //connesso o non connesso
 
         public Tv(string produttore1, string modello1, float potenza1, int pollici1, int pixelAltezza1, int pixelLunghezza1, string tipologiaPannello1, bool ethernet1, bool wifi1, int quantitaPorteHdmi1)
@@ -34,6 +34,9 @@ namespace Domotica
             tipologiaPannello = tipologiaPannello1;
             ethernet = ethernet1;
             quantitaPorteHDMI = quantitaPorteHdmi1;
+
+            canale = 0;
+            volume = 10;
         }
 
         public void accendi()
@@ -46,28 +49,43 @@ namespace Domotica
             stato = false;
         }
 
-        public void canale(int numero)
+        public int getCanale()
         {
-            canaleSel = numero;
+            return canale;
         }
 
-        public void canalePiu(int c)
+        public void setCanale(int c)
+        {
+            canale = c;
+        }
+
+        public int getVolume()
+        {
+            return volume;
+        }
+
+        public void setVolume(int v)
+        {
+            volume = v;
+        }
+
+        public void canaleSu(int c)
         {
             if (c + 1 < 1000)
             {
-                canaleSel++;
+                canale++;
             } 
         }
 
-        public void canaleMeno(int c)
+        public void canaleGiu(int c)
         {
             if (c - 1 > 0)
             {
-                canaleSel--;
+                canale--;
             }
         }
 
-        public void aumentaVolume(int v)
+        public void volumeSu(int v)
         {
             if (v + 1 < 1000)
             {
@@ -75,7 +93,7 @@ namespace Domotica
             }
         }
 
-        public void diminuisciVolume(int v)
+        public void volumeGiu(int v)
         {
             if (v - 1 >= 0)
             {
