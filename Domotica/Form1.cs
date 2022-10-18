@@ -21,8 +21,8 @@ namespace Domotica
         public Form1()
         {
             InitializeComponent();
-            t = new Telecomando("samsung", "tel-08", true, false, true);
             tv = new Tv("samsung", "qled", 50, 55, 1080, 1920, "ips", true, true, 4);
+            t = new Telecomando("samsung", "tel-08", true, false, true, tv);
             pnlTvOff.Show();
 
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
@@ -41,11 +41,10 @@ namespace Domotica
         {
             int volume;
 
-            lblCanale.Text = Convert.ToString(t.getCanaleTv());
-            volume = t.getVolumeTv();
+            lblCanale.Text = Convert.ToString(tv.getCanale());
+            volume = tv.getVolume();
 
-            volume = checkVolume(volume);
-            t.setVolumeTv(volume);
+            t.setVolume(volume);
 
             lblVolume.Text = Convert.ToString(volume);
         }
@@ -57,18 +56,18 @@ namespace Domotica
 
         private void btnGetCanale_Click(object sender, EventArgs e)
         {
-            textBoxCanale.Text = Convert.ToString(t.getCanaleTv());
+            textBoxCanale.Text = Convert.ToString(tv.getCanale());
         }
 
         private void btnSetCanale_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(Convert.ToInt32(textBoxCanale.Text));
+            t.setCanale(Convert.ToInt32(textBoxCanale.Text));
             textBoxCanale.Text = null;
         }
 
         private void btnGetVolume_Click(object sender, EventArgs e)
         {
-            textBoxVolume.Text = Convert.ToString(t.getVolumeTv());
+            textBoxVolume.Text = Convert.ToString(tv.getVolume());
         }
 
         private void btnClearVolume_Click(object sender, EventArgs e)
@@ -78,18 +77,8 @@ namespace Domotica
 
         private void btnSetVolume_Click(object sender, EventArgs e)
         {
-            t.setVolumeTv(Convert.ToInt32(textBoxVolume.Text));
+            t.setVolume(Convert.ToInt32(textBoxVolume.Text));
             textBoxVolume.Text = null;
-        }
-
-        public static int checkVolume(int v) // controlla che il volume sia tra 0 e 100
-        {
-            if (v > 100 || v < 0)
-            {
-                return 0;
-            }
-            else
-                return v;
         }
 
         private void pictureBoxOnOff_Click(object sender, EventArgs e)
@@ -110,72 +99,72 @@ namespace Domotica
 
         private void btnVolumeSu_Click(object sender, EventArgs e) // aggiunge 1 al volume
         {
-            int v = t.getVolumeTv();
+            int v = tv.getVolume();
             t.volumeSu(v);
         }
 
         private void btnVolumeGiu_Click(object sender, EventArgs e) // diminuisce 1 al volume
         {
-            int v = t.getVolumeTv();
+            int v = tv.getVolume();
             t.volumeGiu(v);
         }
 
         private void btnCanaleSu_Click(object sender, EventArgs e) // aggiunge 1 al canale
         {
-            int c = t.getCanaleTv();
+            int c = tv.getCanale();
             t.canaleSu(c);
         }
 
         private void btnCanaleGiu_Click(object sender, EventArgs e) // diminuisce di 1 il canale
         {
-            int c = t.getCanaleTv();
+            int c = tv.getCanale();
             t.canaleGiu(c);
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(1);
+            t.setCanale(1);
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(2);
+            t.setCanale(2);
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(3);
+            t.setCanale(3);
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(4);
+            t.setCanale(4);
         }
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(5);
+            t.setCanale(5);
         }
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(6);
+            t.setCanale(6);
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(7);
+            t.setCanale(7);
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
 
-            t.setCanaleTv(8);
+            t.setCanale(8);
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(9);
+            t.setCanale(9);
         }
 
         private void btnMuto_Click(object sender, EventArgs e)
@@ -196,7 +185,7 @@ namespace Domotica
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            t.setCanaleTv(0);
+            t.setCanale(0);
         }
     }
 }

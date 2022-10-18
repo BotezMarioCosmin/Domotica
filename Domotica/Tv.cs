@@ -34,9 +34,6 @@ namespace Domotica
             tipologiaPannello = tipologiaPannello1;
             ethernet = ethernet1;
             quantitaPorteHDMI = quantitaPorteHdmi1;
-
-            canale = 0;
-            volume = 10;
         }
 
         public void accendi()
@@ -56,7 +53,8 @@ namespace Domotica
 
         public void setCanale(int c)
         {
-            canale = c;
+            if (c >= 0 || c <= 100)
+                canale = c;
         }
 
         public int getVolume()
@@ -66,7 +64,8 @@ namespace Domotica
 
         public void setVolume(int v)
         {
-            volume = v;
+            if (v >= 0 || v <= 100)
+                volume = v;
         }
 
         public void canaleSu(int c)

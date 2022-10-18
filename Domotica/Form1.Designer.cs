@@ -39,6 +39,8 @@
             this.textBoxVolume = new System.Windows.Forms.TextBox();
             this.btnGetVolume = new System.Windows.Forms.Button();
             this.pnlTelecomando = new System.Windows.Forms.Panel();
+            this.btnMuto = new System.Windows.Forms.Button();
+            this.pictureBoxSource = new System.Windows.Forms.PictureBox();
             this.btn0 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
@@ -55,15 +57,13 @@
             this.lblVol = new System.Windows.Forms.Label();
             this.btnVolumeGiu = new System.Windows.Forms.Button();
             this.btnVolumeSu = new System.Windows.Forms.Button();
-            this.btnMuto = new System.Windows.Forms.Button();
-            this.pictureBoxSource = new System.Windows.Forms.PictureBox();
             this.pictureBoxOnOff = new System.Windows.Forms.PictureBox();
             this.pnlTv = new System.Windows.Forms.Panel();
+            this.textBoxProduttoreModello = new System.Windows.Forms.TextBox();
             this.pictureBoxVol = new System.Windows.Forms.PictureBox();
             this.pnlTvOff = new System.Windows.Forms.Panel();
             this.lblVolume = new System.Windows.Forms.Label();
             this.lblCanale = new System.Windows.Forms.Label();
-            this.textBoxProduttoreModello = new System.Windows.Forms.TextBox();
             this.pnlTelecomando.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnOff)).BeginInit();
@@ -178,6 +178,35 @@
             this.pnlTelecomando.Name = "pnlTelecomando";
             this.pnlTelecomando.Size = new System.Drawing.Size(303, 500);
             this.pnlTelecomando.TabIndex = 9;
+            // 
+            // btnMuto
+            // 
+            this.btnMuto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMuto.BackgroundImage = global::Domotica.Properties.Resources.mute;
+            this.btnMuto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMuto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMuto.FlatAppearance.BorderSize = 0;
+            this.btnMuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMuto.Location = new System.Drawing.Point(121, 387);
+            this.btnMuto.Name = "btnMuto";
+            this.btnMuto.Size = new System.Drawing.Size(55, 55);
+            this.btnMuto.TabIndex = 19;
+            this.btnMuto.UseVisualStyleBackColor = false;
+            this.btnMuto.Click += new System.EventHandler(this.btnMuto_Click);
+            // 
+            // pictureBoxSource
+            // 
+            this.pictureBoxSource.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBoxSource.BackgroundImage = global::Domotica.Properties.Resources.source;
+            this.pictureBoxSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSource.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxSource.Location = new System.Drawing.Point(224, 18);
+            this.pictureBoxSource.Name = "pictureBoxSource";
+            this.pictureBoxSource.Size = new System.Drawing.Size(56, 56);
+            this.pictureBoxSource.TabIndex = 18;
+            this.pictureBoxSource.TabStop = false;
             // 
             // btn0
             // 
@@ -423,35 +452,6 @@
             this.btnVolumeSu.UseVisualStyleBackColor = false;
             this.btnVolumeSu.Click += new System.EventHandler(this.btnVolumeSu_Click);
             // 
-            // btnMuto
-            // 
-            this.btnMuto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMuto.BackgroundImage = global::Domotica.Properties.Resources.mute;
-            this.btnMuto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMuto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMuto.FlatAppearance.BorderSize = 0;
-            this.btnMuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMuto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMuto.Location = new System.Drawing.Point(121, 387);
-            this.btnMuto.Name = "btnMuto";
-            this.btnMuto.Size = new System.Drawing.Size(55, 55);
-            this.btnMuto.TabIndex = 19;
-            this.btnMuto.UseVisualStyleBackColor = false;
-            this.btnMuto.Click += new System.EventHandler(this.btnMuto_Click);
-            // 
-            // pictureBoxSource
-            // 
-            this.pictureBoxSource.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBoxSource.BackgroundImage = global::Domotica.Properties.Resources.source;
-            this.pictureBoxSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSource.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxSource.Location = new System.Drawing.Point(224, 18);
-            this.pictureBoxSource.Name = "pictureBoxSource";
-            this.pictureBoxSource.Size = new System.Drawing.Size(56, 56);
-            this.pictureBoxSource.TabIndex = 18;
-            this.pictureBoxSource.TabStop = false;
-            // 
             // pictureBoxOnOff
             // 
             this.pictureBoxOnOff.BackgroundImage = global::Domotica.Properties.Resources.onoff;
@@ -477,6 +477,18 @@
             this.pnlTv.Name = "pnlTv";
             this.pnlTv.Size = new System.Drawing.Size(868, 610);
             this.pnlTv.TabIndex = 4;
+            // 
+            // textBoxProduttoreModello
+            // 
+            this.textBoxProduttoreModello.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBoxProduttoreModello.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxProduttoreModello.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProduttoreModello.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBoxProduttoreModello.Location = new System.Drawing.Point(203, 490);
+            this.textBoxProduttoreModello.Name = "textBoxProduttoreModello";
+            this.textBoxProduttoreModello.Size = new System.Drawing.Size(459, 30);
+            this.textBoxProduttoreModello.TabIndex = 4;
+            this.textBoxProduttoreModello.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBoxVol
             // 
@@ -520,18 +532,6 @@
             this.lblCanale.TabIndex = 0;
             this.lblCanale.Text = "0";
             this.lblCanale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBoxProduttoreModello
-            // 
-            this.textBoxProduttoreModello.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBoxProduttoreModello.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxProduttoreModello.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxProduttoreModello.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBoxProduttoreModello.Location = new System.Drawing.Point(203, 490);
-            this.textBoxProduttoreModello.Name = "textBoxProduttoreModello";
-            this.textBoxProduttoreModello.Size = new System.Drawing.Size(459, 30);
-            this.textBoxProduttoreModello.TabIndex = 4;
-            this.textBoxProduttoreModello.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 

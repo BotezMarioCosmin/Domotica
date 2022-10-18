@@ -15,11 +15,12 @@ namespace Domotica
         private bool infrarossi;
         private bool bluetooth;
         private bool wifi;
-        Tv tv = new Tv("samsung", "qled", 50, 55, 1080, 1920, "ips", true, true, 4);
+        private Tv tv;
+        
         //mutabili
         bool muto = false;
 
-        public Telecomando(string produttore1,string modello1, bool infrarossi1, bool bluetooth1, bool wifi1)
+        public Telecomando(string produttore1,string modello1, bool infrarossi1, bool bluetooth1, bool wifi1, Tv tv1)
         { 
             produttore = produttore1;
             modello = modello1;
@@ -27,6 +28,13 @@ namespace Domotica
             infrarossi = infrarossi1;
             bluetooth = bluetooth1;
             wifi = wifi1;
+
+            setTv(tv1);
+            if (tv != null)
+            {
+                tv.setVolume(10);
+                tv.setCanale(1);
+            }
         }
 
         private void setTv(Tv tv1)
@@ -78,51 +86,49 @@ namespace Domotica
 
         public void accendiTv()
         {
-            tv.accendi();
+            if (tv != null)
+                tv.accendi();
         }
 
         public void spegniTv()
         {
-            tv.spegni();
+            if (tv != null)
+                tv.spegni();
         }
 
-        public int getCanaleTv()
+        public void setCanale(int c)
         {
-            return tv.getCanale();
+            if (tv != null)
+                tv.setCanale(c);
         }
 
-        public void setCanaleTv(int c)
+        public void setVolume(int v)
         {
-            tv.setCanale(c);
-        }
-
-        public int getVolumeTv()
-        {
-            return tv.getVolume();
-        }
-
-        public void setVolumeTv(int v)
-        {
-            tv.setVolume(v);
+            if (tv != null)
+                tv.setVolume(v);
         }
         public void volumeSu(int v)
         {
-            tv.volumeSu(v);
+            if (tv != null)
+                tv.volumeSu(v);
         }
 
         public void volumeGiu(int v)
         {
-            tv.volumeGiu(v);
+            if (tv != null)
+                tv.volumeGiu(v);
         }
 
         public void canaleSu(int c)
         {
-            tv.canaleSu(c);
+            if (tv != null)
+                tv.canaleSu(c);
         }
 
         public void canaleGiu(int c)
         {
-            tv.canaleGiu(c);
+            if (tv != null)
+                tv.canaleGiu(c);
         }
 
         public bool volumeMuto()
