@@ -16,6 +16,7 @@ namespace Domotica
         string tipologiaPannello;
         bool ethernet, wifi; //presenza di scheda di rete wireless
         int quantitaPorteHDMI;
+        string id; //PK, Primary Key
 
         //mutabili
         bool stato;
@@ -34,6 +35,16 @@ namespace Domotica
             tipologiaPannello = tipologiaPannello1;
             ethernet = ethernet1;
             quantitaPorteHDMI = quantitaPorteHdmi1;
+        }
+
+        public string getProduttore()
+        {
+            return produttore;
+        }
+
+        public string getModello()
+        {
+            return modello;
         }
 
         public void accendi()

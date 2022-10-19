@@ -34,7 +34,7 @@ namespace Domotica
             pictureBoxVol.BackColor = Color.Transparent;
             pictureBoxVol.Hide();
 
-            //textBoxProduttoreModello.Text = tv.getProduttore() + " " + tv.getModello();
+            textBoxProduttoreModello.Text = tv.getProduttore() + " " + tv.getModello();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

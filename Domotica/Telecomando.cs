@@ -32,7 +32,7 @@ namespace Domotica
             setTv(tv1);
             if (tv != null)
             {
-                tv.setVolume(10);
+                tv.setVolume(0);
                 tv.setCanale(1);
             }
         }
