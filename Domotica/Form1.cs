@@ -16,6 +16,7 @@ namespace Domotica
     {
         private Telecomando t;
         private Tv tv;
+        private Caldaia cal;
 
         bool tvOn = false;
         public Form1()
@@ -23,6 +24,7 @@ namespace Domotica
             InitializeComponent();
             tv = new Tv("samsung", "qled", 50, 55, 1080, 1920, "ips", true, true, 4);
             t = new Telecomando("samsung", "tel-08", true, false, true, tv);
+            cal = new Caldaia("ca-01-xy", "indesit", "burnheat", "23/10/2022");
             pnlTvOff.Show();
 
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
@@ -35,6 +37,8 @@ namespace Domotica
             pictureBoxVol.Hide();
 
             textBoxProduttoreModello.Text = tv.getProduttore() + " " + tv.getModello();
+            //
+            textBoxCaldaiaFunz.Text = cal.getModFunzionamentoDescrizione(cal.getModFunzionamento());
         }
 
         private void timer1_Tick(object sender, EventArgs e)

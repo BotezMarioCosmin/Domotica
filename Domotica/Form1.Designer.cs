@@ -64,6 +64,7 @@
             this.pnlTvOff = new System.Windows.Forms.Panel();
             this.lblVolume = new System.Windows.Forms.Label();
             this.lblCanale = new System.Windows.Forms.Label();
+            this.textBoxCaldaiaFunz = new System.Windows.Forms.TextBox();
             this.pnlTelecomando.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOnOff)).BeginInit();
@@ -533,12 +534,20 @@
             this.lblCanale.Text = "0";
             this.lblCanale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // textBoxCaldaiaFunz
+            // 
+            this.textBoxCaldaiaFunz.Location = new System.Drawing.Point(887, 480);
+            this.textBoxCaldaiaFunz.Name = "textBoxCaldaiaFunz";
+            this.textBoxCaldaiaFunz.Size = new System.Drawing.Size(100, 26);
+            this.textBoxCaldaiaFunz.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.textBoxCaldaiaFunz);
             this.Controls.Add(this.pnlTelecomando);
             this.Controls.Add(this.btnClearVolume);
             this.Controls.Add(this.btnSetVolume);
@@ -600,6 +609,7 @@
         private System.Windows.Forms.Button btnMuto;
         private System.Windows.Forms.PictureBox pictureBoxVol;
         private System.Windows.Forms.TextBox textBoxProduttoreModello;
+        private System.Windows.Forms.TextBox textBoxCaldaiaFunz;
     }
 }
 

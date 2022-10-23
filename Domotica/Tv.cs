@@ -9,14 +9,14 @@ namespace Domotica
     public class Tv
     {
         //immutabili
-        string produttore, modello;
-        float potenza; //watt
-        int pollici;
-        int pixelAltezza, pixelLunghezza;
-        string tipologiaPannello;
-        bool ethernet, wifi; //presenza di scheda di rete wireless
-        int quantitaPorteHDMI;
-        string id; //PK, Primary Key
+        private string produttore, modello;
+        private float potenza; //watt
+        private int pollici;
+        private int pixelAltezza, pixelLunghezza;
+        private string tipologiaPannello;
+        private bool ethernet, wifi; //presenza di scheda di rete wireless
+        private int quantitaPorteHDMI;
+        private string id; //PK, Primary Key
 
         //mutabili
         bool stato;
