@@ -21,7 +21,7 @@ namespace Domotica
         string[] modFunzionamentoDescrizione = new string[5] {"inattivo", "riscaldamento", "acqua calda", "riscaldamento e acqua calda", "errore"};
         int modFunzionamento;
 
-        //costruttore
+        //costruttore 
         public Caldaia(string id1, string produttore1, string modello1, string dataInstallazione1)
         {
             id = id1;
