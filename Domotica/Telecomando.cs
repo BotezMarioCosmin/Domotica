@@ -30,6 +30,11 @@ namespace Domotica
             wifi = wifi1;
 
             setTv(tv1);
+            checkEsistenza();
+        }
+
+        private void checkEsistenza()
+        {
             if (tv != null)
             {
                 tv.setVolume(0);

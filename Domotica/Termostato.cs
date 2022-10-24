@@ -22,6 +22,11 @@ namespace Domotica
             modello = modello1;
 
             setCaldaia(cal1);
+            checkEsistenza();
+        }
+
+        private void checkEsistenza()
+        {
             if (cal != null)
             {
                 cal.setModFunzionamento(0);
