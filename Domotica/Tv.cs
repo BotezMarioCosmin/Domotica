@@ -9,24 +9,27 @@ namespace Domotica
     public class Tv
     {
         //immutabili
-        private string produttore, modello;
+        private string _id; //PK, Primary Key
+        private string _produttore, _modello;
+        private float _prezzo;
         private float potenza; //watt
         private int pollici;
         private int pixelAltezza, pixelLunghezza;
         private string tipologiaPannello;
         private bool ethernet, wifi; //presenza di scheda di rete wireless
         private int quantitaPorteHDMI;
-        private string id; //PK, Primary Key
 
         //mutabili
         bool stato;
         int canale, volume, luminosita;
         bool statoRete; //connesso o non connesso
-
-        public Tv(string produttore1, string modello1, float potenza1, int pollici1, int pixelAltezza1, int pixelLunghezza1, string tipologiaPannello1, bool ethernet1, bool wifi1, int quantitaPorteHdmi1)
+        
+        public Tv(string id1, string produttore1, string modello1, float potenza1, int pollici1, int pixelAltezza1, int pixelLunghezza1, string tipologiaPannello1, bool ethernet1, bool wifi1, int quantitaPorteHdmi1, float prezzo1)
         {
-            produttore = produttore1;
-            modello = modello1;
+            _id = id1;
+            _produttore = produttore1;
+            _modello = modello1;
+            _prezzo = prezzo1;
 
             potenza = potenza1;
             pollici = pollici1;
@@ -37,14 +40,58 @@ namespace Domotica
             quantitaPorteHDMI = quantitaPorteHdmi1;
         }
 
-        public string getProduttore()
+        public float Prezzo//proprietà prezzo
         {
-            return produttore;
+            set
+            {
+                if (value > 0)
+                {
+                    _prezzo = value;
+                }
+            }
+
+            get
+            {
+                return _prezzo;
+            }
         }
 
-        public string getModello()
+        public string Id//proprietà id
         {
-            return modello;
+            set
+            {
+                _id = value;
+            }
+
+            get
+            {
+                return _id;
+            }
+        }
+
+        public string Produttore//proprietà produttore
+        {
+            set
+            {
+                _produttore = value;
+            }
+
+            get
+            {
+                return _produttore;
+            }
+        }
+        public string Modello//proprietà modello
+        {
+            set
+            {
+                _modello = value;
+            }
+
+            get
+            {
+                return _modello;
+            }
         }
 
         public void accendi()

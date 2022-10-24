@@ -18,11 +18,12 @@ namespace Domotica
         private Termostato term;
         private Caldaia cal;
 
-        bool tvOn = false;
+        bool tvOn = false;// da togliere
+
         public Form1()
         {
             InitializeComponent();
-            tv = new Tv("samsung", "qled", 50, 55, 1080, 1920, "ips", true, true, 4);
+            tv = new Tv(tv.Id = "sms_tv_qld", tv.Produttore = "samsung",tv.Modello = "qled", 50, 55, 1080, 1920, "ips", true, true, 4, tv.Prezzo = 400);
             t = new Telecomando("samsung", "tel-08", true, false, true, tv);
             cal = new Caldaia("ca-01-xy", "indesit", "burnheat", "23/10/2022");
             term = new Termostato("as-02-tr", "indesit", "burnheatcontroller", cal);
@@ -88,7 +89,7 @@ namespace Domotica
                 tvOn = true;
                 pnlTvOff.Hide();
             }
-            else if (tvOn == true)
+            else
             {
                 t.spegniTv();
                 tvOn = false;
